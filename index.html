@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" type="text/css" href="./img/devchallenges.png">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700" rel="stylesheet">
+	<title>Checkout</title>
+</head>
+<body>
+	<header>
+		<h1 class="title">Checkout</h1>
+	</header>
+	<section>
+		<article class="products">
+			<div class="products-showcase">
+				<div class="products-showcase__div">
+					<img src="img/photo1.png" alt="product" class="products-showcase__img">
+					<div class="products-showcase__texts">
+						<h4>Vintage Backbag </h4>
+						<div class="product-price">
+							<h5>$<span id="new-price1">$54.99</span></h5>
+							<h6>$94.99</h6>
+						</div>
+						<div class="product-items">
+							<span id="minus1" style="cursor: pointer;">
+								<div>-</div>
+							</span>
+							<h5 id="unit1">1</h5>
+							<span id="plus1" style="cursor: pointer;">
+								<div>+</div>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="products-showcase">
+				<div class="products-showcase__div">
+					<img src="img/photo2.png" alt="product" class="products-showcase__img">
+					<div class="products-showcase__texts">
+						<h4>Levi Shoes</h4>
+						<div class="product-price">
+							<h5>$<span id="new-price2">$74.99</span></h5>
+							<h6>$124.99</h6>
+						</div>
+						<div class="product-items">
+							<span id="minus2" style="cursor: pointer;">
+								<div>-</div>
+							</span>
+							<h5 id="unit2">1</h5>
+							<span id="plus2" style="cursor: pointer;">
+								<div>+</div>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="products-sale">
+				<div class="products-sale__total">
+					<h3>Shipping</h3>
+					<h4>$19</h4>
+				</div>
+				<div class="products-sale__total">
+					<h3>Total</h3>
+					<h4>$<span id="total-price">148.98</span></h4>
+				</div>
+			</div>
+		</article>
+		<article>
+			<form>
+				<div class="forms-data">
+					<h2>Contact infomation</h2>
+					<div>
+						<label for="emailIn" class="forms-data__label">E-mail</label><br>
+						<input type="email" name="email" placeholder="Enter your email..." required id="emailIn" class="forms-data__input" class="forms-data__input"><br>
+						<label for="telIn" class="forms-data__label">Phone</label><br>
+						<input type="tel" name="tel" placeholder="Enter your phone..." required id="telIn" class="forms-data__input">
+					</div>
+				</div>
+				<div class="forms-data">
+					<h2>Shipping address</h2>
+					<div>
+						<label for="nameIn" class="forms-data__label">Full name</label><br>
+						<input type="text" name="name" placeholder="Your name.." required id="nameIn" class="forms-data__input"><br>
+						<label for="addressIn" class="forms-data__label">Address</label><br>
+						<input type="text" name="addres" placeholder="Your address.." required id="addressIn" class="forms-data__input"><br>
+						<label for="cityIn" class="forms-data__label">City</label><br>
+						<input type="text" name="city" placeholder="Your city.." required id="cityIn" class="forms-data__input"><br>
+					</div>
+					<div>
+					<div class="flex-input">
+						<div class="select-box">
+							<h3 class="forms-data__label">Country</h3>
+							<div class="select" id="select">	
+								<div class="content-select">	
+									<h4 class="country">Your country..</h4>	
+								</div>
+							</div>
+							<div class="options" id="options">
+								<a href="#" class="option">
+									<p class="country-name">Canada</p>
+								</a>
+								<a href="#" class="option">
+									<p class="country-name">United States</p>
+								</a>
+								<a href="#" class="option">
+									<p class="country-name">Mexico</p>
+								</a>
+							</div>
+						<input type="hidden" name="country" id="inputSelect" value="">
+						</div>
+
+						<div>
+							<label for="zipIn"class="zip-label">Postal code</label><br>
+							<input type="text" id="zip" name="zip"  pattern="[0-9]*" placeholder="Your postal code.." required id="zipIn" class="zip">
+						</div>
+					</div>
+					</div>
+				</div>
+				
+				<div class="forms-data flex-column">
+					<input type="checkbox" name="checkbox" id="checkpoint" >
+					<label for="checkpoint" class="check-label">Save this information for next time</label>
+					<input type="submit" name="submit" value="Continue">
+				</div>
+			</form>
+		</article>
+	</section>
+	<script src="main.js"></script>
+</body>
+</html>

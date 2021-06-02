@@ -1,0 +1,295 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-size: 15px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+	--inputColor: #bfbfbf;
+	--placeholderColor: #9a9a9a;
+	--itemColor: #e0dfdf;
+	--backgroundColor: #f5f3f3;
+	--submitColor: #f78e04;
+}
+
+.title{
+	margin: 1em .6em;
+	font-size: 1.5em;
+}
+
+.forms-data{
+	margin: 0em .8em;
+}
+
+.forms-data:first-child{
+	margin: 1em .8em 2em .8em;
+}
+
+.forms-data>h2{
+	font-size: .9em;
+	margin: .2em 0em;
+}
+
+.forms-data__label{
+	font-size: .65em;
+	margin: .1em .2em;
+}
+
+.forms-data__input{
+	width: 100%;
+	height: 2.3em;
+	border-radius: 9px;
+	border: 2px solid var(--inputColor);
+	margin: 0 0 .4em 0;
+	padding: 0 .4em;
+}
+
+.forms-data__input::placeholder{
+	font-size: .8em;
+	color: var(--placeholderColor);
+}
+
+.flex-input{
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+.zip{
+	width: 8.5em;
+	height: 2.3em;
+	border-radius: 7px;
+	border: 2px solid var(--inputColor);
+	margin: 0 0em;
+}
+
+.zip::placeholder{
+	font-size: .8em;
+	color: var(--placeholderColor);
+	padding: 0 .4em;
+}
+
+.zip-label{
+	font-size: .65em;
+	margin: .15em .4em;
+}
+
+.select-box{
+	margin: .4em 0;
+}
+
+.select{
+	border: 2px solid var(--inputColor);
+	border-radius: 7px;
+	width: 8.5em;
+	height: 2.3em;
+}
+
+.country,.country-name{
+	font-size: .8em;
+	margin: .6em .4em; 
+	color: var(--placeholderColor);
+}
+
+.country.active{
+	color: #fff;
+}
+
+.options{
+	display: none;
+}
+
+.options.active{
+	display: block;
+	width: 70%;
+	height: 55%;
+	margin: .8em 1.5em;
+	border:2px solid var(--inputColor);
+	border-radius: 8px;
+	animation: fadeIn .3s forwards;
+}
+
+@keyframes fadeIn {
+	from {
+		transform: translateY(-100px) scale(.2);
+	}
+	to {
+		transform: translateY(0) scale(1);
+	}
+}
+
+.option{
+	text-decoration: none;
+	text-align: center;
+	color: var(--placeholderColor);
+}
+
+.flex-column{
+	display: flex;
+	flex-direction: column;
+}
+
+input[type=checkbox]{
+	display: none;
+}
+
+.check-label{
+	font-size: .65em;
+	color: var(--placeholderColor);
+	margin: .7em 0 1.3em 0;
+}
+
+.check-label + input[type=checkbox]{
+	cursor: pointer;
+}
+
+.check-label:before{
+	content: '';
+	background: transparent;
+	width: 1.5em;
+	height: 1.5em;
+	border: 2px solid var(--inputColor);
+	border-radius: 4px;
+	margin: 0 .9em 0 0;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+}
+
+input[type=checkbox]:checked + .check-label:before{
+	content: '✓';
+	font-size: 1em;
+	color: #fff;
+	background: var(--submitColor);
+	border: 2px solid var(--submitColor);
+}
+
+input[type=submit]{
+	border: none;
+	background: var(--submitColor);
+	color: #fff;
+	width: 10.5em;
+	padding: 1em 0;
+	margin: .3em;
+	cursor: pointer;
+	border-radius: 10px;
+	position: relative;
+	left: 43%;
+}
+
+.products{
+	margin: 3.5em .5em;
+	padding: .3em 1em;
+	border-radius: 15px;
+	background: var(--backgroundColor);
+}
+
+.products-showcase__div{
+	display: flex;
+	margin: 2em 0;
+}
+
+.products-showcase__img{
+	width: 7.5em;
+	border-radius: 10px;
+	margin: 0 1.5em 0 0;
+}
+
+.products-showcase__texts>h4{
+	font-size: .8em;
+}
+
+.product-price{
+	margin: .6em 0;
+	display: flex;
+}
+
+.product-price>h5{
+	font-size: .9em;
+	margin: 0 1em 0 0;
+	color: var(--submitColor);
+}
+
+.product-price>h6{
+	font-size: .85em;
+	text-decoration: line-through;
+}
+
+.product-items{
+	display: flex;
+	justify-content: space-evenly;
+	border: 1px solid #000;
+	border-radius: 8px;
+	padding: 1em 0;
+}
+
+#minus1,#minus2,#plus1,#plus2{
+	background: var(--itemColor);
+	padding: .1em .5em;
+	border-radius: 3px;
+}
+
+.products-sale{
+	margin: 4em 0;
+}
+
+.products-sale__total{
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid #ccc;
+}
+
+.products-sale__total>h3, 
+.products-sale__total>h4{
+	font-size: .8em;
+	margin: .6em 0;
+}
+
+@media screen and (min-width:425px) {
+	input[type=submit]{
+		position: relative;
+		left: 57.4%;
+	}
+
+	.zip{
+		width: 12.5em;
+	}
+
+	.select{
+		width: 12.5em;
+	}
+}
+
+@media screen and (min-width:768px) {
+	section{
+		display: flex;
+		flex-direction: row-reverse;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+
+	.products{
+		position: relative;
+		top: -2em;
+		height: 28.5em;
+	}
+
+	.zip{
+		width: 12.5em;
+	}
+
+	.select{
+		margin: 0 .8em 0 0;
+		width: 12.5em;
+	}
+}
+
+@media screen and (min-width:1024px) {
+	
+	.products{
+		
+	}
+}
+
