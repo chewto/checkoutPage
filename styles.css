@@ -62,13 +62,12 @@
 	height: 2.3em;
 	border-radius: 7px;
 	border: 2px solid var(--inputColor);
-	margin: 0 0em;
+	padding: 0 .4em;
 }
 
 .zip::placeholder{
 	font-size: .8em;
 	color: var(--placeholderColor);
-	padding: 0 .4em;
 }
 
 .zip-label{
